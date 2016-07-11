@@ -1,0 +1,247 @@
+/* roboto-300 - latin-ext_vietnamese_latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'),
+    url('../fonts/roboto-v15-latin-ext_vietnamese_latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/roboto-v15-latin-ext_vietnamese_latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-300italic - latin-ext_vietnamese_latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 300;
+    src: local('Roboto Light Italic'), local('Roboto-LightItalic'),
+    url('../fonts/roboto-v15-latin-ext_vietnamese_latin-300italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/roboto-v15-latin-ext_vietnamese_latin-300italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-regular - latin-ext_vietnamese_latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'),
+    url('../fonts/roboto-v15-latin-ext_vietnamese_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/roboto-v15-latin-ext_vietnamese_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-italic - latin-ext_vietnamese_latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Roboto Italic'), local('Roboto-Italic'),
+    url('../fonts/roboto-v15-latin-ext_vietnamese_latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/roboto-v15-latin-ext_vietnamese_latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-700 - latin-ext_vietnamese_latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Bold'), local('Roboto-Bold'),
+    url('../fonts/roboto-v15-latin-ext_vietnamese_latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/roboto-v15-latin-ext_vietnamese_latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-700italic - latin-ext_vietnamese_latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'),
+    url('../fonts/roboto-v15-latin-ext_vietnamese_latin-700italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/roboto-v15-latin-ext_vietnamese_latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+
+/*.CodeMirror-line {*/
+/*font-family: Consolas, monospace !important;*/
+/*}*/
+
+.siteThumbnail, .pathName, .file-list-group-item {
+    cursor: default;
+}
+
+.siteThumbnailImg {
+    display: block;
+    max-width: 230px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+}
+
+.CodeMirror {
+    padding: 0 !important;
+}
+
+.tabs-left, .tabs-right {
+    border-bottom: none;
+    padding-top: 2px;
+}
+
+.tabs-left {
+    border-right: 1px solid #ddd;
+}
+
+.tabs-right {
+    border-left: 1px solid #ddd;
+}
+
+.tabs-left > li, .tabs-right > li {
+    float: none;
+    margin-bottom: 2px;
+}
+
+.tabs-left > li {
+    margin-right: -1px;
+}
+
+.tabs-right > li {
+    margin-left: -1px;
+}
+
+.tabs-left > li.active > a,
+.tabs-left > li.active > a:hover,
+.tabs-left > li.active > a:focus {
+    border-bottom-color: #ddd;
+    border-right-color: transparent;
+}
+
+.tabs-right > li.active > a,
+.tabs-right > li.active > a:hover,
+.tabs-right > li.active > a:focus {
+    border-bottom: 1px solid #ddd;
+    border-left-color: transparent;
+}
+
+.tabs-left > li > a {
+    border-radius: 4px 0 0 4px;
+    margin-right: 0;
+    display: block;
+}
+
+.tabs-right > li > a {
+    border-radius: 0 4px 4px 0;
+    margin-right: 0;
+}
+
+.panel-heading h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: normal;
+    width: 75%;
+    padding-top: 8px;
+}
+
+.panel-heading-sm {
+    height: 38px;
+    padding: 4px 10px;
+}
+
+.bootstrap-select {
+    width: 145px !important;
+}
+
+/* Start Sticky footer styles */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+/* End Sticky footer styles */
+
+/* START codemirror height auto up to */
+.code-editor.CodeMirror {
+    /*height: 200px;*/
+    /*overflow: auto;*/
+    /*max-height: 200px;*/
+    /*min-height:150px !important;*/
+}
+
+.CodeMirror-scroll {
+    /*height: auto;*/
+    /*max-height: 200px;*/
+    /*min-height:150px !important;*/
+    /*overflow: scroll;*/
+}
+
+/* END codemirror height auto up to */
+
+/* start xs navbar */
+.navbar-xs, .navbar-header {
+    min-height: 28px;
+    border-radius: 0
+}
+
+.navbar-btn {
+    margin: 1px 0 1px 0 !important;
+}
+
+.navbar-xs > .navbar-header > .navbar-brand {
+    padding: 2px 8px;
+    font-size: 14px;
+    line-height: 24px;
+    height: 28px;
+}
+
+.navbar-xs .navbar-nav > li > a {
+    border-right: 1px solid #ddd;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    line-height: 24px
+}
+
+/* end xs navbar */
+
+/* start btn-seperator */
+.btn-separator:after {
+    content: ' ';
+    display: block;
+    float: left;
+    background: #ADADAD;
+    margin: 2px 4px;
+    height: 24px;
+    width: 1px;
+}
+
+/* end btn-seperator */
+
+.dropdown-menu::before,
+.dropdown-menu::after {
+    border: none !important;
+}
+
+.filter-control {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.file-list-group-item:first-child {
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
