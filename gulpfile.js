@@ -146,7 +146,6 @@ function server(done) {
 }
 
 function serverForApp(done) {
-    console.trace('init browserSync');
     browser.init({
         server: site.buildRoot,
         ui:     false,
