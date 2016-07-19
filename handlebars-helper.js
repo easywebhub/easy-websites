@@ -1,10 +1,12 @@
 'use strict';
 
 var HandlebarsLayouts = require('handlebars-layouts');
+var Helpers = require('handlebars-helpers');
 var moment = require('moment');
 
 module.exports = function (Handlebars) {
     Handlebars.registerHelper(HandlebarsLayouts(Handlebars));
+    Helpers({handlebars: Handlebars});
 
     // dang ky rivetData helper block cho handlebars ở đây
 
