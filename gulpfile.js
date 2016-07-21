@@ -83,31 +83,7 @@ function metalsmith(done) {
  * nếu ở chế độ production thì minify
  * concat script thành app.js nếu ${site.script.concat} == true
  */
-function script() {
-    const IS_CONCAT = site.script.concat && site.script.concat === true;
-    let concatName = 'app.js';
-    if (site.script.concatName !== undefined && typeof(site.script.concatName) === 'string')
-        concatName = site.script.concatName;
-    let task = gulp.src(site.script.files)
-        .pipe($.plumber());
-    if (!PROD)
-        task = task.pipe($.sourcemaps.init());
 
-    // babel es6 -> es5
-    task = task.pipe($.babel({presets: ['es2015'], compact: false}));
-
-    if (IS_CONCAT)
-        task = task.pipe($.concat(concatName));
-
-    if (PROD) {
-        task = task.pipe($.uglify().on('error', e => {
-            console.log(e);
-        }));
-    } else {
-        task = task.pipe($.sourcemaps.write());
-    }
-    return task.pipe(gulp.dest(`${site.buildRoot}/js`));
-}
 
 /**
  * Inline css, js task
@@ -157,7 +133,7 @@ function serverForApp(done) {
 // Xóa ${buildRoot} (metalsmith tự động xóa)
 // build metalsmith, javascript, image
 // copy tất cả qua ${buildRoot}
-gulp.task('build', gulp.series(metalsmith, gulp.parallel(asset, script), inlineSource));
+gulp.task('build', gulp.series(metalsmith, gulp.parallel(asset), inlineSource));
 
 function reload(done) {
     browser.reload();
@@ -168,7 +144,7 @@ function watch() {
     gulp.watch(['site.js'], gulp.series(reloadSiteConfig, 'build', reload));
 
     gulp.watch(`${site.assetRoot}/**/*`, gulp.series(asset, reload));      // watch asset
-    gulp.watch(`${site.scriptRoot}/**/*.js`, gulp.series(script, reload)); // watch script
+    //gulp.watch(`${site.scriptRoot}/**/*.js`, gulp.series(script, reload)); // watch script
     gulp.watch([
         `${site.contentRoot}/**/*`,
         `${site.layoutRoot}/**/*`
