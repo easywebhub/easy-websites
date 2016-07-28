@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">  
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -22,7 +22,7 @@
     <div class="container-responsive">
       <div class="columns">
         <div class="homepage-hero-intro column">
-          <h1 class="display-heading-1 jumbotron-title">How people build website</h1>
+          <h1 class="display-heading-1 jumbotron-title">{{header}}</h1>
           <p class="display-intro jumbotron-lead">{{description}}</p>
         </div>
         <div class="homepage-hero-signup column">
@@ -61,6 +61,6 @@
 	var baseHref = document.location.protocol + '//' + document.location.host;
 	var parts = document.location.href.split(/\//);
 	if (parts.length > 4) baseHref += '/' + parts[3];
-	document.write('<base href="' + baseHref + '" />'); 
+	document.write('<base href="' + baseHref + '" />');
 </script>
 </html>
