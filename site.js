@@ -99,8 +99,6 @@ site.metalsmith = {
         }
     },
 
-
-
     'metalsmith-pagination':    {
         '_enable': true,
         'collections.blog':    {
@@ -113,17 +111,11 @@ site.metalsmith = {
               'title': 'Title of metalsmith-pagination file site.js'
             }
         },
-        // // test filter
-        // 'collections.baiviet': {
-        //     'perPage':   1,
-        //     'layout':    'blog.html',
-        //     'first':     'baiviet/index.html',
-        //     'path':      'baiviet/:num/index.html',
-        //     'filter':    meta => {
-        //         return meta.dacbiet === false;
-        //     },
-        //     'noPageOne': true
-        // }
+    },
+
+    'metalsmith-category': {
+      '_enable': true,
+      'directory': `${site.categoryRoot}`
     },
 
     'metalsmith-permalinks':    {
