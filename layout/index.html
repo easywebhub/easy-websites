@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <base href="{{global.github-url}}" >
+  <!-- <base href="{{global.github-url}}" > -->
+  <base href="." >
   <title>{{global.title}}</title>
   <meta name="description" content="{{ global.description }}">
   <meta name="keywords" content="{{ global.meta-tag.keywords }}">
@@ -58,10 +59,4 @@
     </div>
   </div>
 </body>
-<script type="text/javascript">
-	var baseHref = document.location.protocol + '//' + document.location.host;
-	var parts = document.location.href.split(/\//);
-	if (parts.length > 4) baseHref += '/' + parts[3];
-	document.write('<base href="' + baseHref + '" />');
-</script>
 </html>
