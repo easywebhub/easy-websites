@@ -1,0 +1,35 @@
+<h1>default layout Page File</h1>
+<h5>pagination.num {{pagination.num}}<h5>
+<h5>pagination.index {{pagination.index}}<h5>
+<h5>pagination.name {{pagination.name}}<h5>
+
+<h4>CUSTOM META DATA OF CATEGORY</h4>
+{{#each metadata}}
+<h5>{{@key}} - {{this}}</h5>
+{{/each}}
+
+<!-- JSON of first 4 content from category 'tin-tuc.the-gioi.my' -->
+<h5>CATEGORY first 4 content from category 'tin-tuc.the-gioi.my'<h5>
+{{#each (first ( lookup category 'tin-tuc.the-gioi.my') 4) }}
+	<a href="/{{ this.path }}">{{ this.title }}</a>
+	<h5>Content:</h5>
+	<span>{{ toString this.contents }}</span>
+{{/each}}
+
+<br>
+<h5>PAGE FILES<h5>
+{{#each pagination.files}}
+	<h5>File<h5>
+	<a href="/{{ this.path }}">{{ this.title }}</a>
+	<h5>Content:</h5>
+	<span>{{ toString this.contents }}</span>
+	<hr>
+	<br>
+{{/each}}
+
+{{#if pagination.previous}}
+	<a href="/{{pagination.previous.path}}">Previous page</a>
+{{/if}}
+{{#if pagination.next}}
+	<a href="/{{pagination.next.path}}">Next page</a>
+{{/if}}

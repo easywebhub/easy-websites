@@ -83,40 +83,45 @@ site.metalsmith = {
         'gfm':         true,
         'tables':      true
     },
+    
+    'metalsmith-category': {
+		'_enable': true,
+		'directory': `${site.contentRoot}/category`
+    },
+		
+    'metalsmith-tag': {
+		'_enable': true,
+		'directory': `${site.contentRoot}/tag`
+    },
 
     'metalsmith-collections':   {
         '_enable': true,
-        // collection theo file pattern + test limit
+         // collection theo file pattern + test limit
         'blog':    {
             'pattern': 'blog/**/*.html',
             'sortBy':  'date',
             'reverse': true,
         },
-        // collection theo key trong metadata `"collection": "baiviet"`
+         // collection theo key trong metadata `"collection": "baiviet"`
         'baiviet': {
             'sortBy':  'date',
             'reverse': true
         }
     },
 
-    'metalsmith-pagination':    {
-        '_enable': true,
-        'collections.blog':    {
-            'perPage':   1,
-            'layout':    'blog-list.html',
-            'first':     'blog/index.html',
-            'path':      'blog/:num/index.html',
-            'noPageOne': true,
-            'pageMetadata': {
-              'title': 'Title of metalsmith-pagination file site.js'
-            }
-        },
-    },
-
-    'metalsmith-category': {
-      '_enable': true,
-      'directory': `${site.categoryRoot}`
-    },
+    //'metalsmith-pagination':    {
+    //    '_enable': true,
+    //    'collections.blog':    {
+    //        'perPage':   1,
+    //        'layout':    'blog-list.html',
+    //        'first':     'blog/index.html',
+    //        'path':      'blog/:num/index.html',
+    //        'noPageOne': true,
+    //        'pageMetadata': {
+    //          'title': 'Title of metalsmith-pagination file site.js'
+    //        }
+    //    },
+    //},
 
     'metalsmith-permalinks':    {
         '_enable':  true,
