@@ -27,6 +27,10 @@ module.exports = function (Handlebars) {
         return JSON.stringify(obj);
     });
 
+	Handlebars.registerHelper('toString', function (obj) {
+        return obj.toString();
+    });
+    
     Handlebars.registerHelper('removeIndex', function (url) {
         return url.replace('index.html', '');
     });
