@@ -1,0 +1,11 @@
+{
+    "sortBy": "title",
+    "reverse": false,
+    "metadata": {},
+    "displayName": "Tin Tức - Tin Văn Hóa",
+    "perPage": 10,
+    "noPageOne": true,
+    "layout": "tin-van-hoa.category.html",
+    "first": ":categoryPath/index.html",
+    "path": ":categoryPath/page/:num/index.html"
+}

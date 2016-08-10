@@ -3,12 +3,12 @@
 <h5>pagination.index {{pagination.index}}<h5>
 <h5>pagination.name {{pagination.name}}<h5>
 
-<h4>CUSTOM META DATA OF CATEGORY</h4>
+<h4>CUSTOM META DATA OF CATEGORY Tin Van Hoa</h4>
 {{#each metadata}}
 <h5>{{@key}} - {{this}}</h5>
 {{/each}}
 
-<h5>PAGE FILES OF {{pagination.category}}  {{pagination.name}}<h5>
+<h5>PAGE FILES OF {{pagination.category}}<h5>
 {{#each pagination.files}}
 	<h5>File<h5>
 	<a href="/{{ this.path }}">{{ this.title }}</a>

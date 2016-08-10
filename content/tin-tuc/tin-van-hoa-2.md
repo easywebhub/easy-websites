@@ -1,9 +1,12 @@
 ---json
 {
-    "title": "Chi tiết tin văn hóa 2",
     "slug": "tin-van-hoa-2",
-    "category" : "tin-tuc.tin-van-hoa",
-    "description" : "Mô tả tin văn hóa",
-    "layout": "tin-tuc.html"
+    "layout": "tin-tuc.html",
+    "title": "Chi tiết tin văn hóa 2",
+    "category": "tin-tuc.tin-van-hoa",
+    "description": "Mô tả tin văn hóa",
+    "date": "",
+    "permalink": ""
 }
 ---
+NOI DUNG TIN VAN HOA 2
