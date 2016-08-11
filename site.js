@@ -86,12 +86,12 @@ site.metalsmith = {
     
     'metalsmith-category': {
 		'_enable': true,
-		'directory': `${site.contentRoot}/category`
+		'directory': `${site.metadataRoot}/category`
     },
 		
     'metalsmith-tag': {
 		'_enable': true,
-		'directory': `${site.contentRoot}/tag`
+		'directory': `${site.metadataRoot}/tag`
     },
 
     'metalsmith-collections':   {
