@@ -4,7 +4,7 @@
         "displayName": "slug",
         "type": "Text",
         "validations": [],
-        "viewOnly": false,
+        "viewOnly": true,
         "required": false
     },
     {
@@ -37,13 +37,6 @@
         "type": "Text",
         "validations": [],
         "viewOnly": false,
-        "required": false
-    },
-    {
-        "name": "permalink",
-        "displayName": "permalink",
-        "type": "Boolean",
-        "validations": [],
         "required": false
     }
 ]
