@@ -1,8 +1,10 @@
 <!doctype html>
-<html lang="en">  
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- <base href="{{global.github-url}}" > -->
+  <base href="." >
   <title>{{global.title}}</title>
   <meta name="description" content="{{ global.description }}">
   <meta name="keywords" content="{{ global.meta-tag.keywords }}">
@@ -18,11 +20,11 @@
 
 </head>
 <body>
-  <div class="jumbotron jumbotron-inverse" style="margin-bottom:1px;background-image:url('/img/bg1.jpg');">
+  <div class="jumbotron jumbotron-inverse" style="margin-bottom:1px;background-image:url('img/bg1.jpg');">
     <div class="container-responsive">
       <div class="columns">
         <div class="homepage-hero-intro column">
-          <h1 class="display-heading-1 jumbotron-title">How people build website</h1>
+          <h1 class="display-heading-1 jumbotron-title">{{header}}</h1>
           <p class="display-intro jumbotron-lead">{{description}}</p>
         </div>
         <div class="homepage-hero-signup column">
@@ -55,12 +57,7 @@
         </div>
       </div>
     </div>
-  </div>  
-<script type="text/javascript">
-	var baseHref = document.location.protocol + '//' + document.location.host;
-	var parts = document.location.href.split(/\//);
-	if (parts.length > 4) baseHref += '/' + parts[3];
-	document.write('<base href="' + baseHref + '" />'); 
-</script>
+  </div>
+  {{{contents}}}
 </body>
 </html>

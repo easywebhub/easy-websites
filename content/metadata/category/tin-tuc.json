@@ -1,0 +1,11 @@
+{
+    "sortBy": "title",
+    "reverse": false,
+    "metadata": {},
+    "displayName": "Tin Tức",
+    "perPage": 10,
+    "noPageOne": true,
+    "layout": "tin-tuc.category.html",
+    "first": ":categoryPath/index.html",
+    "path": ":categoryPath/page/:num/index.html"
+}

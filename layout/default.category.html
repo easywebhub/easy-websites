@@ -1,0 +1,24 @@
+<h1>default layout Page File</h1>
+<h5>pagination.num {{pagination.num}}<h5>
+<h5>pagination.index {{pagination.index}}<h5>
+<h5>pagination.name {{pagination.name}}<h5>
+
+<h4>CUSTOM META DATA OF CATEGORY</h4>
+{{#each metadata}}
+<h5>{{@key}} - {{this}}</h5>
+{{/each}}
+
+<h5>PAGE FILES OF {{pagination.category}}  {{pagination.name}}<h5>
+{{#each pagination.files}}
+	<h5>File<h5>
+	<a href="/{{ this.path }}">{{ this.title }}</a>
+	<hr>
+	<br>
+{{/each}}
+
+{{#if pagination.previous}}
+	<a href="/{{pagination.previous.path}}">Previous page</a>
+{{/if}}
+{{#if pagination.next}}
+	<a href="/{{pagination.next.path}}">Next page</a>
+{{/if}}
