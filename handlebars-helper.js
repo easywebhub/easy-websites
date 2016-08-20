@@ -6,7 +6,15 @@ var moment = require('moment');
 
 module.exports = function (Handlebars) {
     Handlebars.registerHelper(HandlebarsLayouts(Handlebars));
-    Helpers({handlebars: Handlebars});
+	['array', 'code', 'collection', 'comparison', 'date', 'fs', 'html', 'i18n', 'inflection', 'logging', 'markdown', 'match', 'math', 'misc', 'number', 'path', 'string', 'url'].forEach(function(name) {
+		Helpers[name]({
+		handlebars: Handlebars
+		});
+	});
+	
+	Handlebars.registerHelper('toString', function (obj) {		
+		return obj.toString();		
+	});
 
     // dang ky rivetData helper block cho handlebars ở đây
 
