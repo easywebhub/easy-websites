@@ -6,43 +6,6 @@ var moment = require('moment');
 
 module.exports = function (Handlebars) {
     Handlebars.registerHelper(HandlebarsLayouts(Handlebars));
-  //  Helpers({handlebars: Handlebars});
-    ['array', 'code', 'collection', 'comparison', 'date', 'fs', 'html', 'i18n', 'inflection', 'logging', 'markdown', 'match', 'math', 'misc', 'number', 'path', 'string', 'url'].forEach(function(name) {
-        Helpers[name]({
-        handlebars: Handlebars
-        });
-    });
-
-    // dang ky rivetData helper block cho handlebars ở đây
-
-    // rivetData helper, bat buoc key trong meta data cua content phai la 'rivetData'
-    Handlebars.registerHelper('rivetData', obj => {
-        if (obj.data.root.rivetData)
-            return JSON.stringify(obj.data.root.rivetData);
-        else
-            return '{}';
-    });
-
-    Handlebars.registerHelper('json', function (obj) {
-        return JSON.stringify(obj);
-    });
-    
-     Handlebars.registerHelper('toString', function (obj) {
-        return obj.toString();
-    });
-
-    Handlebars.registerHelper('removeIndex', function (url) {
-        return url.replace('index.html', '');
-    });
-    
-    'use strict';
-
-var HandlebarsLayouts = require('handlebars-layouts');
-var Helpers = require('handlebars-helpers');
-var moment = require('moment');
-
-module.exports = function (Handlebars) {
-    Handlebars.registerHelper(HandlebarsLayouts(Handlebars));
     //  Helpers({handlebars: Handlebars});
     ['array', 'code', 'collection', 'comparison', 'date', 'fs', 'html', 'i18n', 'inflection', 'logging', 'markdown', 'match', 'math', 'misc', 'number', 'path', 'string', 'url'].forEach(function (name) {
         Helpers[name]({
@@ -79,7 +42,7 @@ module.exports = function (Handlebars) {
         chunks.some(function (name) {
             count++;
             var fullCategoryName = chunks.slice(0, count).join('.');
-            var found = node.childs.some(function (childNode) {
+            var found = node.children.some(function (childNode) {
                 if (childNode.category == fullCategoryName) {
                     node = childNode;
                     return true;
@@ -121,7 +84,7 @@ module.exports = function (Handlebars) {
         chunks.some(function (name) {
             count++;
             var fullCategoryName = chunks.slice(0, count).join('.');
-            var found = node.childs.some(function (childNode) {
+            var found = node.children.some(function (childNode) {
                 if (childNode.category == fullCategoryName) {
                     node = childNode;
                     ret.push(childNode);
@@ -139,18 +102,6 @@ module.exports = function (Handlebars) {
 
         return ret;
     });
-
-    Handlebars.registerHelper('formatDate', function (context, options) {
-        var format = options.hash.format || "YYYY-MM-DD";
-
-        if (context === "now") {
-            context = new Date();
-        }
-
-        return moment(context).format(format);
-    });
-};
-
 
     Handlebars.registerHelper('formatDate', function (context, options) {
         var format = options.hash.format || "YYYY-MM-DD";
