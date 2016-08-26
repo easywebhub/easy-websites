@@ -35,7 +35,17 @@ module.exports = function (Handlebars) {
         return url.replace('index.html', '');
     });
 
-    Handlebars.registerHelper('lookupCategory', function (obj, childPath) {
+	var lookupEx = function (obj, propertyPath) {
+        var props = propertyPath.split('.');
+        var current = obj;
+        while(props.length) {
+            if(typeof current !== 'object') return undefined;
+            current = current[props.shift()];
+        }
+        return current;
+    });
+    
+    Handlebars.registerHelper('lookupCategory', function (obj, childPath, propertyPath) {
         var chunks = childPath.split('.');
         var count = 0;
         var node = obj;
@@ -56,22 +66,17 @@ module.exports = function (Handlebars) {
             }
             return false;
         });
-
+		
+		if (typeof(propertyPath) === 'string' && node != undefined) {
+			return lookupEx(node, propertyPath);
+		}
         return node;
     });
 
     /**
      * Lookup nested object
      */
-    Handlebars.registerHelper('lookupEx', function (obj, propertyPath) {
-        var props = propertyPath.split('.');
-        var current = obj;
-        while(props.length) {
-            if(typeof current !== 'object') return undefined;
-            current = current[props.shift()];
-        }
-        return current;
-    });
+    Handlebars.registerHelper('lookupEx', lookupEx);
 
     /**
      * return array of category from root to leaf of @param {string} childPath
