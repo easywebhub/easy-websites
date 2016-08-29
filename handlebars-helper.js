@@ -41,6 +41,7 @@ module.exports = function (Handlebars) {
     });
     
     var lookupEx = function (obj, propertyPath) {
+		if(!propertyPath.split) propertyPath = String(propertyPath);
         var props = propertyPath.split('.');
         var current = obj;
         while(props.length) {
@@ -51,6 +52,7 @@ module.exports = function (Handlebars) {
     };
     
     Handlebars.registerHelper('lookupCategory', function (obj, childPath, propertyPath) {
+		if(!childPath.split) childPath = String(childPath);
         var chunks = childPath.split('.');
         var count = 0;
         var node = obj;
@@ -87,6 +89,7 @@ module.exports = function (Handlebars) {
      * return array of category from root to leaf of @param {string} childPath
      */
     Handlebars.registerHelper('genBreadcrumb', function (obj, childPath) {
+		if(!childPath.split) childPath = String(childPath);
         var chunks = childPath.split('.');
         var count = 0;
         var node = obj;
