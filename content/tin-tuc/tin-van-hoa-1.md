@@ -5,8 +5,7 @@
     "title": "Chi tiết tin văn hóa 1",
     "category": "tin-tuc.tin-van-hoa",
     "description": "Mô tả tin văn hóa",
-    "date": "",
-    "permalink": ""
+    "date": ""
 }
 ---
 NOI DUNG TIN VAN HOA 1
