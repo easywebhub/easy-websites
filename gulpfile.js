@@ -93,12 +93,12 @@ function sass() {
         let sassConfig = Object.assign({}, site.style.sass);
         sassConfig.outputStyle = 'expanded';
         task = task.pipe($.sass(sassConfig).on('error', $.sass.logError));
+        if (site.style.autoprefixer)
+            task = task.pipe($.autoprefixer(site.style.autoprefixer));
     }
 
     if (PROD) {
-        if (site.style.autoprefixer)
-            task = task.pipe($.autoprefixer(site.style.autoprefixer));
-        task = task.pipe($.cssnano({safe: true}));
+       task = task.pipe($.cssnano({autoprefixer: false}));
     } else {
         task = task.pipe($.sourcemaps.write());
     }
