@@ -202,7 +202,7 @@ function watch() {
     gulp.watch([
         `${site.contentRoot}/**/*`,
         `${site.layoutRoot}/**/*`
-    ], gulp.series(metalsmith, reload));
+    ], gulp.series(metalsmith, inlineSource, reload));
 }
 
 // Build the site, run the server, and watch for file changes
